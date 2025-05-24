@@ -1,0 +1,10 @@
+
+import padas as pd
+data = pd.DataFrame(dataset.loc[:,'prep_time'])
+
+final = data.fillna(80.0) # Pandas will fill 80.0 in all null values
+
+final = data.fillna(data.mean()) # Pandas will fill Mean values in all null values
+
+final = data.fillna(method='ffill') # Pandas will fill Mean values in all null values
+
